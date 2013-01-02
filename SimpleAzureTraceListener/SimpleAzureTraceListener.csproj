@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Listeners\AzureTableTraceListener.cs" />
     <Compile Include="Listeners\Base\AzureTraceListener.cs" />
+    <Compile Include="Listeners\AzureSqlTraceListener.cs" />
     <Compile Include="Models\AzureTraceMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
