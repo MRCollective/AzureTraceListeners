@@ -2,7 +2,7 @@
 using System.Text;
 using Microsoft.WindowsAzure.StorageClient;
 
-namespace SimpleAzureTraceListener.Models
+namespace AzureTraceListeners.Models
 {
     public class AzureTraceMessage : TableServiceEntity
     {

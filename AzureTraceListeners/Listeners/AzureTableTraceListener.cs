@@ -1,11 +1,9 @@
-﻿using System;
-using System.Diagnostics;
+﻿using AzureTraceListeners.Listeners.Base;
+using AzureTraceListeners.Models;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.StorageClient;
-using SimpleAzureTraceListener.Listeners.Base;
-using SimpleAzureTraceListener.Models;
 
-namespace SimpleAzureTraceListener.Listeners
+namespace AzureTraceListeners.Listeners
 {
     public class AzureTableTraceListener : AzureTraceListener
     {

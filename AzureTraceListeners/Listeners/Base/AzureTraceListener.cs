@@ -1,8 +1,8 @@
 using System;
 using System.Diagnostics;
-using SimpleAzureTraceListener.Models;
+using AzureTraceListeners.Models;
 
-namespace SimpleAzureTraceListener.Listeners.Base
+namespace AzureTraceListeners.Listeners.Base
 {
     public abstract class AzureTraceListener : TraceListener
     {

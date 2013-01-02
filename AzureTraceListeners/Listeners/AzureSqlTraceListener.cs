@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using SimpleAzureTraceListener.Listeners.Base;
-using SimpleAzureTraceListener.Models;
+using AzureTraceListeners.Listeners.Base;
+using AzureTraceListeners.Models;
 
-namespace SimpleAzureTraceListener.Listeners
+namespace AzureTraceListeners.Listeners
 {
     public class AzureSqlTraceListener : AzureTraceListener
     {

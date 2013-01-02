@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAzureTraceListener", "SimpleAzureTraceListener\SimpleAzureTraceListener.csproj", "{763180FE-8A0C-4458-B283-095D7E41ABF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTraceListeners", "AzureTraceListeners\AzureTraceListeners.csproj", "{763180FE-8A0C-4458-B283-095D7E41ABF7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{04895899-45CF-471B-A09E-8BB9C592A3AB}"
 	ProjectSection(SolutionItems) = preProject

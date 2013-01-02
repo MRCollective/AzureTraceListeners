@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SimpleAzureTraceListener")]
+[assembly: AssemblyTitle("AzureTraceListeners")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Curtin University")]
-[assembly: AssemblyProduct("SimpleAzureTraceListener")]
-[assembly: AssemblyCopyright("Copyright © Curtin University 2013")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("AzureTraceListeners")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
