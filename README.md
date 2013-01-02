@@ -52,6 +52,19 @@ Setting up the AzureSqlTraceListener
     
     Trace.Listeners.Add(new AzureSqlTraceListener(applicationName, connectionString, tableName));
     
+Logging
+-------
+
+After adding any desired listeners, trace messages from your code will be automatically logged:
+
+    Trace.WriteLine("Testing logging!");
+	
+You can optionally specify a standard trace category:
+
+    Trace.WriteLine("Testing an error...", "Error");
+	
+More advanced trace functionality (stack traces, etc) is not supported in this release.
+	
 Roadmap
 -------
 
