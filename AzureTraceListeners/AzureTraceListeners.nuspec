@@ -11,7 +11,7 @@
        Matt Davies
     </authors>
     <description>
-       Simple Azure Trace Listeners for Table Storage and SQL Azure, for use when Diagnostics is not available (ie when using the Azure Websites functionality). 
+       Simple Azure Trace Listeners for Table Storage and Azure SQL, for use when Diagnostics is not available (ie when using the Azure Websites functionality).
     </description>
     <language>
        en-US 
