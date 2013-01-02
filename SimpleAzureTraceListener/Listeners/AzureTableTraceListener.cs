@@ -2,8 +2,9 @@
 using System.Diagnostics;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.StorageClient;
+using SimpleAzureTraceListener.Models;
 
-namespace SimpleAzureTraceListener
+namespace SimpleAzureTraceListener.Listeners
 {
     public class AzureTableTraceListener : TraceListener
     {

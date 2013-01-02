@@ -55,8 +55,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AzureTableTraceListener.cs" />
-    <Compile Include="AzureTraceMessage.cs" />
+    <Compile Include="Listeners\AzureTableTraceListener.cs" />
+    <Compile Include="Models\AzureTraceMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
