@@ -65,6 +65,11 @@ You can optionally specify a standard trace category:
 	
 More advanced trace functionality (stack traces, etc) is not supported in this release.
 	
+Contributions
+-------------
+
+If you'd like to leave feedback or contributions, please contact me on Twitter @mdaviesnet or send a pull request.
+	
 Roadmap
 -------
 
