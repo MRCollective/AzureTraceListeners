@@ -2,10 +2,10 @@
 <package>
   <metadata>
     <id>
-       SimpleAzureTraceListener 
+       AzureTraceListeners
     </id>
     <version>
-       0.2.2
+       0.2.3
     </version>
     <authors>
        Matt Davies
@@ -17,7 +17,7 @@
        en-US 
     </language>
     <projectUrl>
-      https://github.com/MattDavies/SimpleAzureTraceListener
+      https://github.com/MattDavies/AzureTraceListeners
     </projectUrl>
     <dependencies>
       <dependency id="WindowsAzure.Storage" version="1.7.0.0" />
