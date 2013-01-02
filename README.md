@@ -74,3 +74,4 @@ Roadmap
 * Add Transient Fault Handling to the Azure SQL listener
 * Add retry logic if a trace message cannot be logged?
 * Ability to customise/extend the fields to be logged
+* Add more advanced trace functionality support
