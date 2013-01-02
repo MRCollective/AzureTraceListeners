@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using SimpleAzureTraceListener.Listeners.Base;
 using SimpleAzureTraceListener.Models;
@@ -26,7 +27,7 @@ namespace SimpleAzureTraceListener.Listeners
                                             (@applicationName, @message, @category, @timeStamp)", _tableName);
                 command.Parameters.Add(new SqlParameter("applicationName", SqlDbType.NVarChar) { Value = azureTraceMessage.ApplicationName });
                 command.Parameters.Add(new SqlParameter("message", SqlDbType.NVarChar) { Value = azureTraceMessage.Message });
-                command.Parameters.Add(new SqlParameter("category", SqlDbType.NVarChar) { Value = azureTraceMessage.Category });
+                command.Parameters.Add(new SqlParameter("category", SqlDbType.NVarChar) { IsNullable = true, Value = azureTraceMessage.Category ?? (object) DBNull.Value });
                 command.Parameters.Add(new SqlParameter("timeStamp", SqlDbType.DateTime2) { Value = azureTraceMessage.Timestamp });
                 command.ExecuteNonQuery();
             }
