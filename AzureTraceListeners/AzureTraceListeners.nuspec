@@ -5,13 +5,13 @@
        AzureTraceListeners
     </id>
     <version>
-       0.2.3
+       0.3.2
     </version>
     <authors>
        Matt Davies
     </authors>
     <description>
-       Simple Azure Trace Listeners for Table Storage and Azure SQL, for use when Diagnostics is not available (ie when using the Azure Websites functionality).
+       Simple Azure Trace Listeners for Table Storage, Queue Storage and Azure SQL - for use when Diagnostics is not available (ie when using the Azure Websites functionality).
     </description>
     <language>
        en-US 
@@ -24,7 +24,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\SimpleAzureTraceListener.dll" target="lib\NET40" />
-    <file src="bin\Release\SimpleAzureTraceListener.pdb" target="lib\NET40" />
+    <file src="bin\Release\AzureTraceListeners.dll" target="lib\NET40" />
+    <file src="bin\Release\AzureTraceListeners.pdb" target="lib\NET40" />
   </files>
 </package>
