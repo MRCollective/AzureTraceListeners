@@ -14,11 +14,15 @@ Setting up the AzureSqlTraceListener
         [ApplicationName] [nvarchar](max) NOT NULL,
         [Category] [nvarchar](max) NULL,
         [Timestamp] [datetime2](7) NOT NULL,
-        [Message] [nvarchar](max) NOT NULL
+        [Message] [nvarchar](max) NOT NULL,
+        CONSTRAINT [PK_TraceLogs] PRIMARY KEY CLUSTERED 
+        (
+            [Id] ASC
+        )
     )
-	
-	Trace.Listeners.Add(new AzureSqlTraceListener(applicationName, connectionString, tableName));
-	
+    
+    Trace.Listeners.Add(new AzureSqlTraceListener(applicationName, connectionString, tableName));
+    
 Roadmap
 -------
 
