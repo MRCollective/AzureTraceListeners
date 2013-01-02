@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<package>
+  <metadata>
+    <id>
+       SimpleAzureTraceListener 
+    </id>
+    <version>
+       0.1.3
+    </version>
+    <authors>
+       Matt Davies
+    </authors>
+    <description>
+       Simple trace listener for Windows Azure Table Storage, for use when Diagnostics is not available (ie when using the Azure Websites functionality). 
+    </description>
+    <language>
+       en-US 
+    </language>
+    <projectUrl>
+      https://github.com/MattDavies/SimpleAzureTraceListener
+    </projectUrl>
+    <dependencies>
+      <dependency id="WindowsAzure.Storage" version="1.7.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\SimpleAzureTraceListener.dll" target="lib\NET40" />
+    <file src="bin\Release\SimpleAzureTraceListener.pdb" target="lib\NET40" />
+  </files>
+</package>
