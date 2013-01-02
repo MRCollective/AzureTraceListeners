@@ -16,11 +16,15 @@ namespace SimpleAzureTraceListener.Listeners
             _tableName = tableName;
             ApplicationName = applicationName;
             _connection = new SqlConnection(sqlConnectionString);
-            _connection.Open();
         }
 
         protected override void SaveMessage(AzureTraceMessage azureTraceMessage)
         {
+            if (_connection.State != ConnectionState.Open)
+            {
+                _connection.Open();
+            }
+
             using (var command = _connection.CreateCommand())
             {
                 command.CommandText = string.Format(@"INSERT INTO {0} (ApplicationName, Message, Category, Timestamp) VALUES
