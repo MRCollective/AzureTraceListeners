@@ -21,7 +21,7 @@ a storage client string for Tables and Queues ie:
 	
 an ADO.NET connection string for Azure SQL ie:
 
-  Server=tcp:dbserver.database.windows.net,1433;Database=dbname;User ID=dbuser@dbserver;Password=dbpassword;Trusted_Connection=False;Encrypt=True;
+    Server=tcp:dbserver.database.windows.net,1433;Database=dbname;User ID=dbuser@dbserver;Password=dbpassword;Trusted_Connection=False;Encrypt=True;
 
 Table/Queue name defaults to TraceLogs - it can be customised as per the usual rules for Azure Table and Queue names. 
 
