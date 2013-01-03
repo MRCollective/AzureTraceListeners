@@ -6,6 +6,13 @@ Introduction
 
 A simple set of Azure trace listeners for Table Storage, Queue Storage and Azure SQL - useful when Diagnostics is not available (ie when using the Azure Websites functionality) or when only simple logging is desired.
 
+Installation
+------------
+ 
+In the Nuget Package Console:
+
+    Install-Package AzureTraceListeners
+
 Configuration
 -------------
 
