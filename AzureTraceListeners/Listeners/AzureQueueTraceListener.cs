@@ -13,7 +13,7 @@ namespace AzureTraceListeners.Listeners
 
         public AzureQueueTraceListener(string applicationName, string queueConnectionString, string queueName = "tracelogs")
         {
-            if (string.IsNullOrEmpty(ApplicationName))
+            if (string.IsNullOrEmpty(applicationName))
                 throw new ArgumentNullException("applicationName",
                     "You must define an ApplicationName to log trace messages");
 

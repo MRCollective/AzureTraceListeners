@@ -9,7 +9,9 @@ namespace AzureTraceListeners.Models
         public string Message { get; set; }
         public string Category { get; set; }
         public string ApplicationName { get; set; }
-        
+
+        public AzureTraceMessage() { }
+
         public AzureTraceMessage(string message, string category, string applicationName)
         {
             var rowKey = new StringBuilder(applicationName);

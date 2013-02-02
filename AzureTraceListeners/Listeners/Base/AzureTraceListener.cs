@@ -1,5 +1,7 @@
 using System;
 using System.Diagnostics;
+using System.Globalization;
+using System.Text;
 using AzureTraceListeners.Models;
 
 namespace AzureTraceListeners.Listeners.Base
@@ -64,6 +66,40 @@ namespace AzureTraceListeners.Listeners.Base
             {
                 LogTraceException(ex);
             }
+        }
+
+        public override void TraceData(TraceEventCache eventCache, string source, TraceEventType eventType, int id, object data)
+        {
+            if ((Filter != null) && !Filter.ShouldTrace(eventCache, source, eventType, id, null, null, data, null))
+                return;
+            var message = data.ToString();
+            WriteLine(message, eventType.ToString());
+        }
+
+        public override void TraceData(TraceEventCache eventCache, string source, TraceEventType eventType, int id, params object[] data)
+        {
+            if ((Filter != null) && !Filter.ShouldTrace(eventCache, source, eventType, id, null, null, data, null))
+                return;
+
+            var stringBuilder = new StringBuilder();
+            for (var i = 0; i < data.Length; i++)
+            {
+                if (i != 0)
+                {
+                    stringBuilder.Append(", ");
+                }
+                if (data[i] != null)
+                {
+                    stringBuilder.Append(data[i]);
+                }
+            }
+
+            WriteLine(stringBuilder.ToString(), eventType.ToString());
+        }
+        
+        public override void TraceEvent(TraceEventCache eventCache, string source, TraceEventType eventType, int id, string message)
+        {
+            WriteLine(message, eventType.ToString());
         }
 
         protected virtual void LogTraceException(Exception ex)
