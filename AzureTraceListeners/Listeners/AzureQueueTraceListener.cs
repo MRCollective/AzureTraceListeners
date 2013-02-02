@@ -1,4 +1,5 @@
-﻿using System.Web.Script.Serialization;
+﻿using System;
+using System.Web.Script.Serialization;
 using AzureTraceListeners.Listeners.Base;
 using AzureTraceListeners.Models;
 using Microsoft.WindowsAzure;
@@ -12,6 +13,10 @@ namespace AzureTraceListeners.Listeners
 
         public AzureQueueTraceListener(string applicationName, string queueConnectionString, string queueName = "tracelogs")
         {
+            if (string.IsNullOrEmpty(ApplicationName))
+                throw new ArgumentNullException("applicationName",
+                    "You must define an ApplicationName to log trace messages");
+
             ApplicationName = applicationName;
             var storageAccount = CloudStorageAccount.Parse(queueConnectionString);
             var queueClient = storageAccount.CreateCloudQueueClient();

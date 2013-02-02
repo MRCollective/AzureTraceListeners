@@ -55,11 +55,20 @@ namespace AzureTraceListeners.Listeners.Base
             if (string.IsNullOrEmpty(message))
                 return;
 
-            if (string.IsNullOrEmpty(ApplicationName))
-                throw new ArgumentException("You must define an ApplicationName to log trace messages");
+            try
+            {
+                var logMessage = new AzureTraceMessage(message, category, ApplicationName);
+                SaveMessage(logMessage);
+            }
+            catch (Exception ex)
+            {
+                LogTraceException(ex);
+            }
+        }
 
-            var logMessage = new AzureTraceMessage(message, category, ApplicationName);
-            SaveMessage(logMessage);
+        protected virtual void LogTraceException(Exception ex)
+        {
+            Console.WriteLine("An uncaught Trace.WriteLine() exception occured in AzureTraceListener: {0}", ex);
         }
 
         protected abstract void SaveMessage(AzureTraceMessage logMessage);

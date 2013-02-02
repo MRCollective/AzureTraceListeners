@@ -1,4 +1,5 @@
-﻿using AzureTraceListeners.Listeners.Base;
+﻿using System;
+using AzureTraceListeners.Listeners.Base;
 using AzureTraceListeners.Models;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.StorageClient;
@@ -12,6 +13,10 @@ namespace AzureTraceListeners.Listeners
 
         public AzureTableTraceListener(string applicationName, string tableConnectionString, string tableName = "TraceLogs")
         {
+            if (string.IsNullOrEmpty(ApplicationName))
+                throw new ArgumentNullException("applicationName",
+                    "You must define an ApplicationName to log trace messages");
+
             ApplicationName = applicationName;
             _tableName = tableName;
             var storageAccount = CloudStorageAccount.Parse(tableConnectionString);

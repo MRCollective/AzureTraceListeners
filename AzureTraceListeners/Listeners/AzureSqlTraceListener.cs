@@ -13,8 +13,12 @@ namespace AzureTraceListeners.Listeners
 
         public AzureSqlTraceListener(string applicationName, string sqlConnectionString, string tableName = "TraceLogs")
         {
-            _tableName = tableName;
+            if (string.IsNullOrEmpty(ApplicationName))
+                throw new ArgumentNullException("applicationName",
+                    "You must define an ApplicationName to log trace messages");
+
             ApplicationName = applicationName;
+            _tableName = tableName;
             _connection = new SqlConnection(sqlConnectionString);
         }
 
